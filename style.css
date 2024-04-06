@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.df{
+    display : flex ;
+    justify-content : center;
+
+}
+
+.nav-bar{
+    background-color: #fff;
+    width: 1;
+    height: 0px;
+    overflow: hidden;
+    transition: all 1s ease;
+} 
+
+.nav-bar.open{
+    transition: all 1s ease;
+    height : 120px;
+    padding : 0 20px ;
+
+}
+
+.toggle-menu {
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height : 50px;
+    /* background-color: transparent; */
+}
+
+.menu i{
+    color: white;
+    font-size: 25px;
+}
+header{
+    position: fixed;
+    width: 100%;
+}
+
+.theme{
+    margin : 10px;
+    cursor: pointer;
+}
+
+.zoom {
+    cursor: pointer ;
+    color: rgb(243, 140, 140);
+    transition: color 0.5s ease, transform 0.5s ease; /* Adding transform transition */
+}
+
+.zoom:hover {
+    transform: scale(1.3); /* Increasing scale on hover */
+}
+
+.left-sec{
+    margin: 10px;
+}
+
+.main-wrapper{
+    width : 100%;
+    background-color: #222a35;
+    
+}
+
+.aboutme-wrapper{
+    width : 100%;
+    background-color: #000000;
+}
+
+.intro-wrapper{
+    width : 100%;
+    background-color: #222a35;
+}
+
+.background-image{
+    background-image: url('./images/732b141b8f27733113a2ce9f9d9f2b67.jpg');
+    z-index: 100;
+}
+
+
+@font-face {
+    font-family: heading;
+    src: url(../fonts/Elsie_Swash_Caps/ElsieSwashCaps-Regular.ttf);
+}
+
+h2{
+    font-family: heading;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.home-container {
+    background-image: url('./images/Screenshot\ 2023-12-13\ 092535.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1400px;
+    height: 500px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.homesection{
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex ;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    gap : 200px;
+    align-items: center;
+}
+
+.homesection .namesec , .homesection .imagesection,.homesection  .candidateinfo {
+    width : 30%
+
+}
+
+.homesection h2{
+    font-family: 'Poppins';
+    font-weight: 50;
+    font-size: 60px;
+}
+
+.namesec p{
+    border-bottom: 0.5px solid white; /* Add white bottom border to <p> */
+    padding-bottom: 5px;
+    font-family: 'Poppins';
+    font-weight: 50;
+    font-size: 25px
+}
+
+.candidateinfo p{
+    padding-left: 5px;
+    border-left: 0.5px solid white;
+    font-family: 'Poppins'; 
+}
+
+.imagesection img{
+    width: 300px;
+    height: 300px;
+    padding : 0 10px;
+}
+
+
+.nav-bar ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-bar ul li a{
+    font-size: 15px;
+    color : #222a35;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-family: Poppins;
+}
+
+.listitem {
+    font-size: 10px;
+}
+
+.personalinfo{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personalinfo .bio{
+    padding: 10px;
+    color: white;
+    font-family: 'Poppins';
+}
+.personalinfo h4 , .personalinfo h5{
+    font-size: 20px;
+    font-weight: 5;  
+}
+
+.morepersonal-info{
+    padding : 40px 10px;
+}
+
+.bigaboutme h2{
+    color: white;
+    font-family: Libre Baskerville;
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.projectinfo{
+    margin: auto;
+    width: 60%;
+    padding: 30px 0px;
+    padding-left: 50px;
+    color :white;
+    font-family:'Poppins';
+    border-left: 0.5px solid white;
+}
+
+.projectinfo h5{
+    font-size: 18px;
+}
+
+.projectinfo p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.bbtn {
+    transition: all .5s ease-in-out;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    justify-content: center;
+    border: 1px solid #ff8059;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    max-width: 180px;
+    margin: 30px 0 0;
+}
+
+.doll-objects-right {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    pointer-events: none;
+}
+
+.semi-circle-1 {
+    display: flex;
+    width: 50px;
+    height: 100px;
+    border-radius: 0px 100px 100px 0;
+    background: #ff8059;
+    animation: tilt 4.8s linear infinite;
+}
+
+.obj-left {
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    z-index: 1;
+}
+
+.pacman-eye {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #222a35;
+    top: 20px;
+    right: 40px;
+}
+
+.pacman-mouth {
+    background: #222a35;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    animation: pacMan 1s infinite linear;
+}
+
+.resume-wrapper {
+    background: #222a35;
+    padding: 0 20px 120px;
+    position: relative;
+}
+
+.about-me-main {
+    padding: 100px 0 0;
+    width: 100%;
+    max-width: 1800px;
+    margin: auto;
+}
+
+.about-me-main h2 {
+    color: white;
+    font-family: Libre Baskerville;
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.abt-inner {
+    margin: 20px 0 0;
+    position: relative;
+    z-index: 1;
+}
+.abt-left {
+    width: 100%;
+    max-width: 100px;
+    text-align: right;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abt-left {
+    width: 100%;
+    max-width: 100px;
+    text-align: right;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.abt-right {
+    width: 100%;
+    max-width: 800px;
+    padding-left: 50px;
+    border-left: 0.5px solid white;
+}
+
+.abt-right h5 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.abt-right p {
+    font-size: 18px;
+    margin: 35px 0 0;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.abt-right h3 {
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.abt-right {
+    position: relative;
+}
+
+.pro-con::before,
+.abt-right::before {
+    content: '';
+    top: -20px;
+    left: -65px;
+    width: 1px;
+    height: 110%;
+    background: #9fa3a6;
+}
+
+.skill-sep h6 {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 2px 8px;
+    background: #171e28;
+    border-radius: 50px;
+}
+
+.skill-sep h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.skill-sep {
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 5px;
+    position: relative;
+    margin: 0 0 20px;
+    transition: all 2s ease;
+}
+
+.colered .skill-sep:nth-child(1) h6,
+.colered .skill-sep:nth-child(1) ul li {
+    background: #ff8059;
+}
+
+.colered .skill-sep:nth-child(1) ul li:nth-child(10) {
+    background: #171e28;
+}
+
+.colered .skill-sep:nth-child(2) h6,
+.colered .skill-sep:nth-child(2) ul li {
+    background: #686cda;
+    transition: all 2s ease
+}
+
+.colered .skill-sep:nth-child(3) h6,
+.colered .skill-sep:nth-child(3) ul li {
+    background: #39afc9;
+    transition: all 2s ease
+}
+
+.colered .skill-sep:nth-child(4) h6,
+.colered .skill-sep:nth-child(4) ul li:nth-child(-n+8) {
+    background: #0769AD;
+    transition: all 2s ease;
+}
+
+.colered .skill-sep:nth-child(5) h6,
+.colered .skill-sep:nth-child(5) ul li:nth-child(-n+6) {
+    background: #0769AD;
+    transition: all 2s ease;
+}
+
+.colered .skill-sep:nth-child(6) h6,
+.colered .skill-sep:nth-child(6) ul li:nth-child(-n+6) {
+    background: #ffd042;
+    transition: all 2s ease;
+}
+
+.colered .skill-sep:nth-child(7) h6,
+.colered .skill-sep:nth-child(7) ul li:nth-child(-n+8) {
+    background: #7910f1;
+    transition: all 2s ease;
+}
+
+.colered .skill-sep:nth-child(8) h6,
+.colered .skill-sep:nth-child(8) ul li:nth-child(-n+2) {
+    background: #171515;
+    transition: all 2s ease;
+}
+
+.skill-sep:nth-child(2) ul li:nth-child(10) {
+    background: #171e28;
+}
+
+.skill-sep:nth-child(3) ul li:nth-child(10) {
+    background: #171e28;
+}
+
+body.day .colered .skill-sep:nth-child(1) ul li:nth-child(10),
+body.day .colered .skill-sep:nth-child(2) ul li:nth-child(10),
+body.day .colered .skill-sep:nth-child(3) ul li:nth-child(10) {
+    background: #bad0e5;
+}
+
+body.day .skill-sep h6 {
+    background: #bad0e5;
+    color: #fff !important;
+}
+
+.dots {
+    gap: 10px;
+    position: absolute;
+    left: 50px;
+    right: 0;
+    margin: auto;
+}
+
+.dots li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #171e28;
+    transition: all 2s ease
+}
+
+body.day .dots li {
+    background: #bad0e5;
+}
+
+.res-content {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.res-content h3 {
+    font-size: 24px;
+}
+
+.res-con-left {
+    width: 100%;
+    max-width: 200px;
+}
+
+.res-con-left a {
+    margin: 40px 0 0;
+}
+
+.edu-inner span {
+    font-size: 18px;
+    color: #7b8591;
+    font-family: 'Poppins';
+}
+
+.edu-inner p {
+    color: #7b8591;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Poppins';
+}
+
+.edu-inner h6 {
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    font-family: 'Poppins';
+}
+
+
+.edu-inner {
+    margin: 0 0 30px;
+}
+
+.edu-inner p+p {
+    margin: 5px 0 0;
+}
+
+.exp-sep p {
+    font-size: 15px;
+    margin: 0;
+    color: #7b8591;
+    letter-spacing: .5px;
+    margin: 0 0 3px;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
